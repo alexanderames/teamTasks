@@ -48,6 +48,8 @@ class SignUp extends Component {
 							/>
 						</div>
 					</div>
+					<div className="row">
+						<div className="input-field inline">
 							<button
 								className="waves-effect waves-light btn"
 								type="button"
@@ -55,9 +57,11 @@ class SignUp extends Component {
 							>
 								Sign Up
 							</button>
+							{this.state.error.message}
+							<Link to={'/signin'}>Already a user? Sign In!</Link>
+						</div>
+					</div>
 				</form>
-				<div>{this.state.error.message}</div>
-				<div><Link to={'/signin'}>Already a user? Sign In!</Link></div>
 			</div>
 		)
 	}
