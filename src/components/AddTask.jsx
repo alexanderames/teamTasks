@@ -13,7 +13,7 @@ class AddTask extends Component {
 	addTask() {
 		console.log('this', this);
 		const { title } = this.state;
-		const { email } = this.props;
+		const { email } = this.props.user;
 		taskRef.push({email, title});
 	}
 
@@ -43,9 +43,9 @@ class AddTask extends Component {
 }
 
 function mapStateToProps(state) {
-	const { email } = state;
+	const { user } = state;
 	return {
-		email
+		user
 	}
 }
 
