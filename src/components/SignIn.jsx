@@ -26,6 +26,7 @@ class SignIn extends Component {
 	render() {
 		return(
 			<div className="row">
+			{this.state.error.message}
 	    	<form className="col s12">
 					<h2>SignIn</h2>
 					<div className="row">
@@ -57,7 +58,7 @@ class SignIn extends Component {
 							>
 								Sign In
 							</button>
-							{this.state.error.message}
+							
 							<Link to={'/signup'}>Not a user? Sign Up!</Link>
 						</div>
 					</div>
