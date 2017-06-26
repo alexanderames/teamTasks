@@ -11,12 +11,10 @@ class App extends Component {
 
 	render() {
 		return(
-			<div>
-				<div>
-					<h3>Tasks</h3>
-					<AddTask />
-					<TaskList />
-				</div>
+			<div style={{margin: '5px'}}>
+				<h3>Tasks</h3>
+				<AddTask />
+				<TaskList />
 				<button
 					className="red"
 					onClick={() => this.signOut()}

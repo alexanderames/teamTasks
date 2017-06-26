@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { taskRef } from '../firebase';
-import { setTasks } from '../actions'; 
+import { setTasks } from '../actions';
+import TaskItem from './TaskItem';
 
 class TaskList extends Component {
 	componentDidMount() {
@@ -11,15 +12,21 @@ class TaskList extends Component {
 				const { email, title } = task.val();
 				tasks.push({ email, title });
 			})
-			console.log('tasks', tasks);
 			this.props.setTasks(tasks);
 		})
 	}
 
 	render() {
-		console.log('this.props.tasks', this.props.tasks);
 		return (
-			<div>Task List </div>
+			<div>
+				{
+					this.props.tasks.map((task, index) => {
+						return (
+							<TaskItem key={index} task={task} />
+						)
+					})
+				}
+			</div>
 		)
 	}
 }
