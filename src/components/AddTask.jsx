@@ -27,15 +27,15 @@ class AddTask extends Component {
 						className="validate"
 						onChange={event => this.setState({title: event.target.value})}
 					/>
-					<div className="col s6">
-						<a
-							className="btn-floating btn-large waves-effect waves-light red"
-							type="button"
-							onClick={() => this.addTask()}
-						>
-						<i className="material-icons">add</i>
-						</a>
-					</div>
+				</div>
+				<div className="col s6">
+					<a
+						className="btn-floating btn-large waves-effect waves-light red"
+						type="button"
+						onClick={() => this.addTask()}
+					>
+					<i className="material-icons">add</i>
+					</a>
 				</div>
 			</div>
 		)

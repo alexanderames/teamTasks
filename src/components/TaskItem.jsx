@@ -6,7 +6,14 @@ class TaskItem extends Component {
 		return (
 			<div style={{margin: '5px'}}>
 				<strong>{title}</strong>
-				_by {email}
+				<span style={{marginRight: '5px'}}>_by {email}</span>
+				<a
+					type="button"
+					className="btn-floating green"
+					onClick={() => this.completeGoal()}
+				>
+					<i className="material-icons">done</i>
+				</a>
 			</div>
 		)
 	}

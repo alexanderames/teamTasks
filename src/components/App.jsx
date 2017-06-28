@@ -12,15 +12,18 @@ class App extends Component {
 	render() {
 		return(
 			<div style={{margin: '5px'}}>
-				<h3>Tasks</h3>
+				<h3>Task List</h3>
 				<AddTask />
+				<hr />
+				<h4>Tasks</h4>
 				<TaskList />
-				<button
-					className="red"
+				<hr />
+				<a
+					className="btn-floating btn-large yellow darken-1"
 					onClick={() => this.signOut()}
 				>
-					Sign Out
-				</button>
+					<i className="material-icons">call_missed_outgoing</i>
+				</a>
 			</div>
 		)
 	}
